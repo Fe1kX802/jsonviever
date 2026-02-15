@@ -13,11 +13,12 @@
     <button id="theme-toggle" class="theme-toggle">🌙</button>
     <div class="app">
         <h1>JSON Viewer</h1>
-        <!-- <button id="filebutton">Загрузить JSON файл</button>
-        <p>Или вставьте JSON в поле ниже:</p> -->
+        <button id="filebutton">Загрузить JSON файл</button>
+        <input type="file" id="hiddenfile" accept=".json" style="display:none">
+        <p>Или вставьте JSON в поле ниже:</p>
         <textarea id="json-input" placeholder="Вставьте JSON сюда"></textarea>
         <button id="parse-btn">Обработка</button>
-        <pre class="result" id="result">----------------------------------------------------------------------------</pre>
+        <pre class="result" id="result">Тут будет ваш json</pre>
 
     </div>
 

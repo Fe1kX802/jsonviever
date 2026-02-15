@@ -111,6 +111,21 @@ h1 {
     cursor: pointer;
 }
 
+#filebutton {
+    background: linear-gradient(135deg, rgba(0, 98, 255, 0.7), rgba(0, 68, 223, 0.4));
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    border: 3px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .key {
     color: var(--json-key);
     font-weight: bold;
