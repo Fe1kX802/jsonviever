@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #222222;
+    --panel: #f5f5f5;
+    --border: #cacaca;
+    --h1: #5444e6;
+    --theme_toggle: #f1f1f1;
+
+    --json-key: #d73a49;
+    --json-string: #032f62;
+    --json-brace: #f1c40f;
+    --json-bracket: #ffde5c;
+    --json-number: #005cc5;
+    --json-boolean: #e36209;
+    --json-null: gray;
+    --json-error: rgba(255, 77, 79, 0.1);
+}
+
+body.dark {
+    --bg: #1e1e1e;
+    --text: #eaeaea;
+    --panel: #2a2a2a;
+    --border: #444444;
+    --h1: #8A8AFF;
+    --theme_toggle: #505050;
+
+    --json-key: #ff7b7b;
+    --json-string: #6cb6ff;
+    --json-brace: #ffd700;
+    --json-bracket: #ffe066;
+    --json-number: #66b2ff;
+    --json-boolean: #ffa500;
+    --json-null: #aaaaaa;
+    --json-error: rgba(255, 77, 79, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.app {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px;
+    font-family: monospace;
+    border-radius: 15px;
+}
+
+h1 {
+    color: var(--h1);
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#result {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#theme-toggle {
+    background-color: var(--theme_toggle);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#parse-btn {
+    background: linear-gradient(135deg, rgba(0, 98, 255, 0.7), rgba(0, 68, 223, 0.4));
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: 3px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.key {
+    color: var(--json-key);
+    font-weight: bold;
+}
+
+.string {
+    color: var(--json-string);
+    font-weight: bold;
+}
+
+.bracket_figure {
+    color: var(--json-brace);
+    font-weight: bold;
+}
+
+.bracket_square {
+    color: var(--json-bracket);
+}
+
+.number {
+    color: var(--json-number);
+}
+
+.boolean {
+    color: var(--json-boolean);
+}
+
+.null {
+    color: var(--json-null);
+}
+
+.error {
+    color: var(--json-key);
+    background-color: var(--json-error);
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 500;
+}
